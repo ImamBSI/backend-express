@@ -24,4 +24,12 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
 	res.status(err.status || 500).json({ message: err.message || "Internal Server Error" });
 });
 
+
+const PORT = process.env.PORT || 3000;
+if (require.main === module) {
+	app.listen(PORT, () => {
+		console.log(`Server listening on port ${PORT}`);
+	});
+}
+
 export default app;

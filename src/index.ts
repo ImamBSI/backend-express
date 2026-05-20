@@ -16,7 +16,7 @@ app.use(express.json());
 
 // Root endpoint (optional)
 app.get("/", (_, res) => {
-  res.send("🚀 Express + TypeScript backend is running!");
+  res.send("Express + TypeScript backend is running!");
 });
 
 // Auto register routes

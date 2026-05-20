@@ -7,7 +7,6 @@ import path from "path";
 dotenv.config();
 
 const app = express();
-
 const PORT = process.env.PORT || 3000;
 
 // Middleware
@@ -26,7 +25,7 @@ async function startServer() {
   });
 
   app.listen(PORT, () => {
-    console.log(`✅ Server running on http://localhost:${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
   });
 }
 

@@ -1,9 +1,7 @@
-import { Router } from "express";
+import { Request, Response } from "express";
 import { getCharacters } from "../services/character-service";
 
-const router = Router();
-
-router.get("/characters", async (_, res) => {
+export async function get(req: Request, res: Response) {
   try {
     const data = await getCharacters();
 
@@ -13,6 +11,4 @@ router.get("/characters", async (_, res) => {
       message: "Failed to fetch characters",
     });
   }
-});
-
-export default router;
+}

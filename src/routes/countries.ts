@@ -3,7 +3,7 @@ import { getCountries } from "../services/country-service";
 
 const router = Router();
 
-router.get("/countries", async (_, res) => {
+router.get("/", async (_, res) => {
   try {
     const data = await getCountries();
 

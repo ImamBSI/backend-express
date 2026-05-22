@@ -17,6 +17,7 @@ export async function getCountries() {
     ENV.COUNTRIES_API,
     query
   );
+  console.log(ENV.COUNTRIES_API);
 
   return response.data.countries;
 }

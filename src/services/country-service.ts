@@ -13,5 +13,10 @@ export async function getCountries() {
     }
   `;
 
-  return graphqlFetch(ENV.COUNTRIES_API, query);
+  const response = await graphqlFetch(
+    ENV.COUNTRIES_API,
+    query
+  );
+
+  return response.data.countries;
 }

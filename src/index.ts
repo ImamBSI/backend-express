@@ -7,15 +7,15 @@ import path from "path";
 dotenv.config();
 
 const app = express();
+
 const PORT = process.env.PORT || 3000;
 
-// Middleware
 app.use(cors());
+
 app.use(express.json());
 
-// Root endpoint
 app.get("/", (_, res) => {
-  res.send("Express + TypeScript backend is running!");
+  res.send("Express backend running");
 });
 
 async function startServer() {

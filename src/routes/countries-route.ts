@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getCountries } from "../../services/country-service";
+import { getCountries } from "../services/country-service";
 
 const router = Router();
 

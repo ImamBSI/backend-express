@@ -3,7 +3,7 @@ import { graphqlFetch } from "../utils/data-fetcher";
 
 export async function getCharacters() {
   const query = `
-    query {
+    {
       characters(page: 1) {
         results {
           id
@@ -15,6 +15,5 @@ export async function getCharacters() {
       }
     }
   `;
-
   return graphqlFetch(ENV.RICK_AND_MORTY_API, query);
 }

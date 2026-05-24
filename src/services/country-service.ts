@@ -3,7 +3,7 @@ import { graphqlFetch } from "../utils/data-fetcher";
 
 export async function getCountries() {
   const query = `
-    query {
+    {
       countries {
         code
         name
@@ -12,12 +12,5 @@ export async function getCountries() {
       }
     }
   `;
-
-  const response = await graphqlFetch(
-    ENV.COUNTRIES_API,
-    query
-  );
-  console.log(ENV.COUNTRIES_API);
-
-  return response.data.countries;
+  return graphqlFetch(ENV.COUNTRIES_API, query);
 }

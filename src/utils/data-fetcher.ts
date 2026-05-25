@@ -1,6 +1,3 @@
-// src/utils/data-fetcher.ts
-import fetch from "node-fetch";
-
 // Untuk GraphQL API (countries)
 export async function graphqlFetch(
   url: string,

@@ -1,4 +1,4 @@
-// Untuk GraphQL API (countries)
+// Untuk GraphQL
 export async function graphqlFetch(
   url: string,
   query: string,
@@ -22,7 +22,7 @@ export async function graphqlFetch(
   }
 }
 
-// Untuk REST API (Rick & Morty)
+// Untuk REST API
 export async function restFetch(url: string) {
   try {
     const response = await fetch(url);

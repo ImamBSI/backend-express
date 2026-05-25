@@ -1,20 +1,17 @@
 import { ENV } from "../config/env";
 import { graphqlFetch } from "../utils/data-fetcher";
 
-export async function getCharacters() {
+export async function getLocations() {
   const query = `
     {
-      characters(page: 1) {
-        results {
+      locations{
+        results{
           id
           name
-          status
-          species
-          image
+          dimension
         }
       }
     }
   `;
   return graphqlFetch(ENV.RICK_AND_MORTY_API, query);
 }
-
